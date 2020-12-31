@@ -1,4 +1,4 @@
-FROM padhihomelab/alpine-base:312.019.0201 as tini-base
+FROM debian:buster-slim as tini-base
 ARG TARGETARCH
 
 FROM tini-base AS tini-base-amd64
