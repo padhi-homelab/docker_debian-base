@@ -5,7 +5,7 @@ FROM tini-base AS tini-base-amd64
 ENV TINI_ARCH=amd64
 
 FROM tini-base AS tini-base-386
-ENV TINI_ARCH=x86
+ENV TINI_ARCH=i386
 
 FROM tini-base AS tini-base-arm64
 ENV TINI_ARCH=arm64
