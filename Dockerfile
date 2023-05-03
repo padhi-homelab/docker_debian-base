@@ -1,4 +1,4 @@
-FROM debian:11.6-slim as tini_base
+FROM debian:11.7-slim as tini_base
 ARG TARGETARCH
 
 FROM tini_base AS tini_base-amd64
