@@ -1,4 +1,4 @@
-FROM debian:11.7-slim as tini_base
+FROM debian:12.0-slim as tini_base
 ARG TARGETARCH
 
 FROM tini_base AS tini_base-amd64
@@ -31,7 +31,7 @@ ADD "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-${T
     /tmp/tini
 
 
-FROM debian:11.7-slim as su-exec_build
+FROM debian:12.0-slim as su-exec_build
 
 ARG SU_EXEC_COMMIT_SHA=212b75144bbc06722fbd7661f651390dc47a43d1
 
@@ -44,7 +44,7 @@ RUN apt update \
  && gcc -Wall su-exec.c -o su-exec
 
 
-FROM debian:11.7-slim
+FROM debian:12.0-slim
 
 LABEL maintainer="Saswat Padhi saswat.sourav@gmail.com"
 
